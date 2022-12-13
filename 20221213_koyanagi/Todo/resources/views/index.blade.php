@@ -27,6 +27,18 @@
               <th>更新</th>
               <th>削除</th>
             </tr>
+            @foreach ($todos as $todo)
+            <tr>
+              <td>{{$todo->created_at}}</td>
+              <td>{{$todo->content}}</td>
+              <td>
+                <button class="button-update">更新</button>
+              </td>
+              <td>
+                <button class="button-delete">削除</button>
+              </td>
+            </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
