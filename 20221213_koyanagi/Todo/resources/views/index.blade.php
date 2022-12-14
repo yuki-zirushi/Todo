@@ -36,7 +36,7 @@
                 <button class="button-update">更新</button>
               </td>
               <td>
-                <form action="/todos/delete" method="post">
+                <form action="{{ route('/todos/delete', ['key' => $parameter]) }}" method="post">
                   @csrf
                   <button class="button-delete">削除</button>
                 </form>
