@@ -97,3 +97,14 @@ tr {
   transition: 0.4s;
   outline: none;
 }
+
+
+.input-update {
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  font-size: 14px;
+  outline: none;
+}

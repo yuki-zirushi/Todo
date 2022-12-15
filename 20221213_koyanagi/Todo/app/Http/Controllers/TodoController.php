@@ -20,6 +20,14 @@ class TodoController extends Controller
         return redirect('/');
     }
 
+    public function update(Request $request)
+    {
+        dd($request);
+        $form = Todo::find($request->id);
+        Todo::where('id', $request->id)->update($form);
+        return redirect('/');
+    }
+
     public function destroy(Request $request)
     {
         Todo::find($request->id)->delete();
