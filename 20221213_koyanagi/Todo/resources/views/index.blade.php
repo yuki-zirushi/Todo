@@ -36,7 +36,7 @@
                 <button class="button-update">更新</button>
               </td>
               <td>
-                <form action="{{ route('/todos/delete', ['key' => $parameter]) }}" method="post">
+                <form action="{{ route('todos.delete', ['id' => $todo->id]) }}" method="post">
                   @csrf
                   <button class="button-delete">削除</button>
                 </form>

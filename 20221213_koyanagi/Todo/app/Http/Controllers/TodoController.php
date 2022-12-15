@@ -22,6 +22,7 @@ class TodoController extends Controller
 
     public function destroy(Request $request)
     {
-        dd($request);
+        Todo::find($request->id)->delete();
+        return redirect('/');
     }
 }
