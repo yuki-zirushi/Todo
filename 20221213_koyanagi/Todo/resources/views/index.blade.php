@@ -35,7 +35,7 @@
                 <input type="text" class="input-update" name="content" value="{{$todo->content}}" form="form1">
               </td>
               <td>
-                <form action="{{ route('todos.update', ['id' => $todo->id, 'content' => $todo->content]) }}" id="form1">
+                <form action="{{ route('todos.update', ['id' => $todo->id, 'content' => $todo->content]) }}" id="form1" method="post">
                   @csrf
                 </form>
                 <button class="button-update" form="form1">更新</button>
