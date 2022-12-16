@@ -31,14 +31,14 @@
             @foreach ($todos as $todo)
             <tr>
               <td>{{$todo->created_at}}</td>
-              <form action="{{ route('todos.update', ['content' => $todo->content, 'id' => $todo->id]) }}" method="post">
-                @csrf
-              </form>
               <td>
                 <input type="text" class="input-update" name="content" value="{{$todo->content}}">
               </td>
               <td>
-                <button class="button-update">更新</button>
+                <form action="{{ route('todos.update', ['id' => $todo->id, 'content' => $todo->content]) }}">
+                  @csrf
+                  <button class="button-update">更新</button>
+                </form>
               </td>
               <td>
                 <form action="{{ route('todos.delete', ['id' => $todo->id]) }}" method="post">
