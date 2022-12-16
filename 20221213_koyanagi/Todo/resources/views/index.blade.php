@@ -32,13 +32,13 @@
             <tr>
               <td>{{$todo->created_at}}</td>
               <td>
-                <input type="text" class="input-update" name="content" value="{{$todo->content}}" form="form1">
+                <input type="text" class="input-update" name="content" value="{{$todo->content}}" form="{{$todo->id}}">
               </td>
               <td>
-                <form action="{{ route('todos.update', ['id' => $todo->id, 'content' => $todo->content]) }}" id="form1" method="post">
+                <form action="{{ route('todos.update', ['id' => $todo->id, 'content' => $todo->content]) }}" id="{{$todo->id}}" method="post">
                   @csrf
                 </form>
-                <button class="button-update" form="form1">更新</button>
+                <button class="button-update" form="{{$todo->id}}">更新</button>
               </td>
               <td>
                 <form action="{{ route('todos.delete', ['id' => $todo->id]) }}" method="post">
